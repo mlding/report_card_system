@@ -44,6 +44,7 @@ class StudentsController {
     generateReport(parms) {
         const normalResponse = `请输入要打印的学生的学号（格式： 学号, 学号,...），按回车提交：\n`;
         const errorResponse = `请按正确的格式输入要打印的学生的学号（格式： 学号, 学号,...），按回车提交：\n`;
+        //丁梦, 13, 汉, 三班, 语文: 12, 数学: 23, 英语: 90, 编程: 30
         const response = parms.displayErrorMessage ? errorResponse : normalResponse;
 
         const queryString = readlineSync.question(response);
